@@ -1,0 +1,1 @@
+import{_ as t,u as a,o as s,c as o}from"../js/index.js";const r={data(){return{email:"",password:"",remember_me:0,message:null,error:!1,auth:a()}},methods:{onSubmit(e){this.auth.loginUser(new FormData(e.target))}}},_={class:"content"};function n(e,c,i,u,d,l){return s(),o("div",_)}var p=t(r,[["render",n],["__scopeId","data-v-53517279"]]);export{p as default};

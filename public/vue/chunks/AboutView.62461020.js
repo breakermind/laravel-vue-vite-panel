@@ -1,0 +1,1 @@
+import{_ as t,T as n,u as a,r as s,o as c,c as r,a as u,b as e}from"../js/index.js";const p={components:{TopMenu:n},data(){return{auth:a()}}},_=e("div",{class:"content"},[e("h1",null," About page content ")],-1);function l(d,i,m,f,h,T){const o=s("TopMenu");return c(),r("main",null,[u(o),_])}var b=t(p,[["render",l]]);export{b as default};

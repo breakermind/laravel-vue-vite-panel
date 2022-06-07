@@ -1,0 +1,1 @@
+import{_ as a,u as e,o as r,c as s}from"../js/index.js";const t={name:"password-page",data(){return{auth:e()}}};function o(n,c,p,u,_,d){return r(),s("h1",null,"Change Password")}var l=a(t,[["render",o]]);export{l as default};

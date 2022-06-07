@@ -1,0 +1,1 @@
+import{o as t,c as s,a as e}from"../js/index.js";const o={class:"greetings"},a=e("p",{class:"text"},[e("h1",null,"404 Error Page!")],-1),c=[a],l={name:"NotFoundView",setup(r){return(n,_)=>(t(),s("div",o,c))}};export{l as default};

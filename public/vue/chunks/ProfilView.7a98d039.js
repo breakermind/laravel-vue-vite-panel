@@ -1,0 +1,1 @@
+import{o as s,c as o,a as e}from"../js/index.js";const t={class:"greetings"},c=e("p",{class:"text"},[e("h1",null,"Profil, only logged users!")],-1),a=[c],i={name:"ProfilView",setup(r){return(n,l)=>(s(),o("div",t,a))}};export{i as default};

@@ -1,0 +1,208 @@
+/* color palette from <https://github.com/vuejs/theme> */
+:root {
+  --font-family-base: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  --font-family-mono: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+}
+
+/* semantic color variables for this project */
+:root {
+  --color-background: #fff;
+  --color-background-soft: #fbfbfb;
+  --color-background-mute: #fefefe;
+
+  --color-border: #eee;
+  --color-border-hover: #efefef;
+
+  --color-heading: #222;
+  --color-text: #222;
+  --color: #204090;
+  --color-hover: #204090aa;
+  --color-placeholder: #20409044;
+  --color-alert: #f23;
+  --color-info: #5c5;
+
+  --section-gap: 160px;
+  --radius: 10px;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-background: #28293d;
+    --color-background-soft: #8f90a6;
+    --color-background-mute: #555770;
+
+    --color-border: #eee;
+    --color-border-hover: #efefef;
+
+    --color-heading: #f2f2f5;
+    --color-text: #f2f2f5;
+    --color: #55cc55;
+    --color-hover: #55cc55aa;
+    --color-placeholder: #55cc5544;
+    --color-alert: #f23;
+    --color-info: #5c5;
+
+    --section-gap: 160px;
+    --radius: 10px;
+  }
+}
+
+*, *::before, *::after {
+  box-sizing: border-box; margin: 0; font-weight: normal; text-decoration: none; outline: 0px none transparent;
+}
+
+::placeholder {
+  color: var(--color-placeholder) !important;
+  font-size: 1.1rem;
+  font-weight: 600;
+  font-family: 'Exo 2', sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  color: var(--color-text);
+  background: var(--color-background);
+  font-family: 'Exo 2', sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  transition: color 0.5s, background-color 0.5s;
+}
+
+h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--color);
+  text-align: left;
+}
+
+h1 img {
+  float: right;
+}
+
+form {
+  margin: 90px auto;
+  width: 90%;
+  max-width: 500px;
+  padding: 20px;
+  overflow: hidden;
+}
+
+label {
+  position: relative;
+  float: left;
+  width: 100%;
+  margin: 10px 0px 5px 0px;
+  color: var(--color-placeholder);
+}
+
+label svg, label i {
+  position: absolute;
+  top: 55px;
+  right: 20px;
+  color: var(--color);
+}
+
+input, select, textarea {
+  font-weight: 600;
+  font-size: 1rem;
+  float: left;
+  width: 100%;
+  padding: 18px 60px 18px 25px;
+  color: var(--color);
+  border: 1px solid var(--color);
+  border-bottom: 4px solid var(--color);
+  border-radius: var(--radius);
+  background: transparent;
+  transition: all .6s;
+}
+
+input:focus, select:focus, textarea:focus {
+  outline: 0px none transparent;
+  color: var(--color);
+  border-color: var(--color);
+  box-shadow: 0px 3px 0px 2px var(--color-placeholder);
+  background: var(--color-background-mute);
+}
+
+input[type=checkbox] {
+  float: left;
+  width: auto;
+}
+
+button {
+  float: right;
+  padding: 15px 25px;
+  color: var(--color);
+  background: transparent;
+  border: 2px solid var(--color);
+  border-radius: var(--radius);
+  font-size: 1.1rem;
+  font-weight: 700;
+  transition: all .3s;
+  cursor: pointer;
+}
+
+button:hover {
+  color: #fff;
+  background: var(--color);
+  border: 2px solid var(--color);
+  font-weight: 700;
+}
+
+a {
+  color: var(--color);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--color-hover);
+}
+
+nav {
+  float: left;
+  width: 100%;
+  padding: 5px;
+}
+
+nav a {
+  float: left;
+  padding: 5px 10px;
+  margin: 5px;
+  color: var(--color);
+}
+
+nav a.router-link-exact-active {
+  color: var(--color);
+  border: 1px solid var(--color-placeholder);
+  border-radius: var(--radius);
+}
+
+.content {
+  float: left;
+  width: 100%;
+  min-height: 100vh;
+  overflow-y: auto;
+}
+
+.full {
+  float: left;
+  width: 100%;
+  overflow: hidden;
+}
+
+.full .left {
+  float: left;
+  padding: 20px 0px;
+}
+
+.full .right {
+  float: right;
+  padding: 20px 0px;
+}
+
+.alert-error {color: #f23; background: #ff223307; padding: 13px 25px; margin: 5px 0px; border-left: 2px solid #f23;}
+.alert-info {color: #5c5; background: #55cc5507; padding: 13px 25px; margin: 5px 0px; border-left: 2px solid #5c5;}
+
+.button {
+  min-width: 150px;
+}

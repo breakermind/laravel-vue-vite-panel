@@ -1,0 +1,1 @@
+import{o as a,c as r,t as n,d as l,a as s,F as i}from"../js/index.js";const o={name:"Title",props:{title:{type:String,required:!0}},setup(t){return(e,c)=>(a(),r("h1",null,n(t.title),1))}},p={name:"ActivateView",setup(t){return(e,c)=>(a(),r(i,null,[l(o,{title:"Activation Page"}),s("h1",null,"Sample module translation: "+n(e.$t("auth.activate")),1)],64))}};export{p as default};

@@ -1,0 +1,62 @@
+.panel * {
+  box-sizing: border-box;
+}
+
+.navbar {
+  z-index: 99;
+  box-sizing: border-box;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  padding: 0px;
+  width: 300px;
+  height: 100%;
+  background: var(--color-background);
+  border-right: 1px solid var(--color-border);
+}
+
+.navbar .links {
+  padding: 20px;
+  float: left;
+  width: 100%;
+  height: calc(100% - 70px);
+  box-sizing: border-box;
+  overflow-y: scroll;
+}
+
+.navbar a {
+  float: left;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.rightbar {
+  box-sizing: border-box;
+  float: left;
+  width: 100%;
+  padding-left: 300px;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+.box {
+  float: left;
+  width: 100%;
+  padding: 30px;
+}
+
+.hidenavbar {
+  display: none;
+}
+
+.rightbarfull {
+  padding-left: 0px;
+}
+
+@media all and (max-width:  1024px) {
+  .navbarfixed {
+    position: fixed;
+    box-shadow: 0px 0px 1024px var(--color);
+  }
+}

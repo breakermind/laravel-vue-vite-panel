@@ -1,0 +1,1 @@
+import{_ as e,u as a,o as r,c as t}from"../js/index.js";const s={data(){return{auth:a()}}};function o(n,c,u,_,p,d){return r(),t("h1",null,"Change Password")}var l=e(s,[["render",o]]);export{l as default};

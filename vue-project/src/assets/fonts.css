@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mali:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pangolin&display=swap');
+
+:root {
+	--font-exo2: font-family: 'Exo 2', sans-serif;
+	--font-mail: ffont-family: 'Pangolin', cursive;
+	--font-pangolin: font-family: 'Mali', cursive;
+}
+
+/*
+font-family: 'Exo 2', sans-serif;
+font-family: 'Pangolin', cursive;
+font-family: 'Mali', cursive;
+*/
+
+/*
+<link href="https://fonts.googleapis.com/css2?family=Pangolin&display=swap" rel="stylesheet">
+*/

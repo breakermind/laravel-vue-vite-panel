@@ -35,7 +35,10 @@ export const useAuthStore = defineStore({
         this.setAuth(res)
       } catch (error) {
         console.log("isAuthenticated ERROR")
-        this.delAuth(error)
+        this.loggedIn = false
+        this.user = null
+        this.message = ''
+        this.error = false
       }
     },
     async loginUser(data) {
@@ -47,6 +50,17 @@ export const useAuthStore = defineStore({
       } catch (error) {
         console.log("Login ERROR")
         this.delAuth(error)
+      }
+    },
+    async logoutUser() {
+      try {
+        let res = await axios.get('/web/api/logout')
+        console.log("Logout OK")
+        this.auth.message = ''
+        this.auth.loggedIn = false
+        this.auth.user = null
+      } catch (error) {
+        console.log("Logout ERROR")
       }
     },
     async changeLocale(locale) {

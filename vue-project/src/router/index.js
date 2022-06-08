@@ -75,10 +75,8 @@ router.beforeEach(async (to, from, next) => {
   // ✅ This will work make sure the correct store is used for the current running app
   const auth = useAuthStore()
 
-  if (to.meta.requiresAuth) {
-    // ✅ Login with remember me token and check is user authenticated
-    // await auth.isAuthenticated()
-  }
+  // ✅ Login with remember me token and check is user authenticated
+  await auth.isAuthenticated()
 
   if(to.name == 'login' && auth.isLoggedIn) {
     // ✅ Redirect to panel if logged

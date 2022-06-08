@@ -9,10 +9,8 @@ export default {
     }
   },
   mounted() {
-    this.auth.message = ''
-    this.auth.loggedIn = false
-    this.auth.user = null
-    router.push({name: 'panel'})
+    this.auth.logoutUser()
+    router.push('/panel')
   }
 }
 </script>

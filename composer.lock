@@ -12,12 +12,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/breakermind/webi.git",
-                "reference": "9c2ae279f103e8cbbebc4db5b4cdd6c964b546d7"
+                "reference": "e67600bef683e32dbf10ef3dc61ad9c72e8397fe"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/breakermind/webi/zipball/9c2ae279f103e8cbbebc4db5b4cdd6c964b546d7",
-                "reference": "9c2ae279f103e8cbbebc4db5b4cdd6c964b546d7",
+                "url": "https://api.github.com/repos/breakermind/webi/zipball/e67600bef683e32dbf10ef3dc61ad9c72e8397fe",
+                "reference": "e67600bef683e32dbf10ef3dc61ad9c72e8397fe",
                 "shasum": ""
             },
             "type": "library",
@@ -56,7 +56,7 @@
                 "issues": "https://github.com/breakermind/webi/issues",
                 "source": "https://github.com/breakermind/webi/tree/v3.0"
             },
-            "time": "2022-06-08T14:42:08+00:00"
+            "time": "2022-06-08T15:47:30+00:00"
         },
         {
             "name": "brick/math",

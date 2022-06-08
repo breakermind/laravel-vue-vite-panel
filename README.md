@@ -23,6 +23,10 @@ npm install -g npm@latest
 cd laravel-vue-vite
 composer update
 
+# Databases
+php artisan migrate --force
+php artisan --env=testing migrate --force
+
 # Vue install, build
 cd vue-project
 npm install
@@ -41,6 +45,22 @@ Add in .gitignore
 ```
 
 # Docs
+
+## Lavarel
+
+### Change in .env (optional)
+```sh
+# Upload main dir
+FILESYSTEM_DISK=public
+```
+
+### Change in .env.testing (optional)
+```sh
+# Environment
+APP_ENV=testing
+# Cache
+CACHE_DRIVER=file
+```
 
 ## Vue variables
 

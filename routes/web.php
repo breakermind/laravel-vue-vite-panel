@@ -21,7 +21,7 @@ Route::get('/error', function () {
 });
 
 // Web api dev routes
-require('web-api.php');
+// require('web-api.php');
 
 // Vue login
 Route::get('/login', function () {

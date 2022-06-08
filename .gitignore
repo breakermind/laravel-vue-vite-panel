@@ -4,6 +4,8 @@
 /public/storage
 /storage/*.key
 /vendor
+/tests/Webi
+/packages/breakermind/webi/.git
 .phpunit.result.cache
 Homestead.json
 Homestead.yaml

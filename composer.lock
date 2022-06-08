@@ -4,15 +4,21 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "abc1bf4354de89324d4a73360bd2fca1",
+    "content-hash": "42cb36bec46d19e0a29c688572a29340",
     "packages": [
         {
             "name": "breakermind/webi",
-            "version": "dev-main",
+            "version": "v3.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/breakermind/webi.git",
+                "reference": "9c2ae279f103e8cbbebc4db5b4cdd6c964b546d7"
+            },
             "dist": {
-                "type": "path",
-                "url": "packages/breakermind/webi",
-                "reference": "e40bf100f22b09d871b0371789b62692bdf511f4"
+                "type": "zip",
+                "url": "https://api.github.com/repos/breakermind/webi/zipball/9c2ae279f103e8cbbebc4db5b4cdd6c964b546d7",
+                "reference": "9c2ae279f103e8cbbebc4db5b4cdd6c964b546d7",
+                "shasum": ""
             },
             "type": "library",
             "extra": {
@@ -26,16 +32,17 @@
                 }
             },
             "autoload": {
-                "classmap": [
-                    "src/"
-                ],
                 "psr-4": {
                     "Webi\\": "src/",
+                    "Database\\Seeders\\": "database/seeders/",
                     "Database\\Factories\\": "database/factories/",
-                    "Database\\Migrations\\": "database/migrations/",
-                    "Database\\Seeders\\": "database/seeders/"
-                }
+                    "Database\\Migrations\\": "database/migrations/"
+                },
+                "classmap": [
+                    "src/"
+                ]
             },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -45,9 +52,11 @@
                     "email": "m.luk.box@gmail.com"
                 }
             ],
-            "transport-options": {
-                "relative": true
-            }
+            "support": {
+                "issues": "https://github.com/breakermind/webi/issues",
+                "source": "https://github.com/breakermind/webi/tree/v3.0"
+            },
+            "time": "2022-06-08T14:42:08+00:00"
         },
         {
             "name": "brick/math",
@@ -7803,9 +7812,7 @@
     ],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": {
-        "breakermind/webi": 20
-    },
+    "stability-flags": [],
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {

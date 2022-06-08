@@ -1,1 +1,0 @@
-import{C as s}from"./ChangeLocale.81ad3ef8.js";import{_ as t,o,c as _,a as e,t as r,d as n}from"../js/index.js";import"./main.f2fa2716.js";const c={class:"greetings"},i={class:"text"},p={name:"LangView",setup(l){return(a,d)=>(o(),_("div",c,[e("p",i,[e("span",null,r(a.$t("message.helloBig")),1),n(s)])]))}};var v=t(p,[["__scopeId","data-v-43a861a3"]]);export{v as default};

@@ -1,1 +1,0 @@
-import{_ as o,o as t,c as _,p as s,b as a,a as c}from"../js/index.js";const d=e=>(s("data-v-28894231"),e=e(),a(),e),n={class:"content"},p=d(()=>c("h1",null,"404 Error Page!",-1)),r=[p],u={name:"NotFoundView",setup(e){return(i,l)=>(t(),_("div",n,r))}};var v=o(u,[["__scopeId","data-v-28894231"]]);export{v as default};

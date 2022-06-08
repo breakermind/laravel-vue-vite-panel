@@ -1,1 +1,0 @@
-import{C as a}from"./ChangeLocale.abad5142.js";import{r as t,o as s,c,a as e,b as o}from"../js/index.js";const r={class:"content"},l=o("h1",null," Change locales ",-1),d={name:"LangView",setup(_){return(p,m)=>{const n=t("TopMenu");return s(),c("main",null,[e(n),o("div",r,[l,e(a)])])}}};export{d as default};

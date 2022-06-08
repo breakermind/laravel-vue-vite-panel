@@ -1,1 +1,0 @@
-import{_ as t,u as e,o as a,c}from"../js/index.js";const o={data(){return{auth:e()}}};function r(n,s,u,_,p,f){return a(),c("h1",null,"Account Settings")}var d=t(o,[["render",r]]);export{d as default};

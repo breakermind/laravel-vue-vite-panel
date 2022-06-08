@@ -1,1 +1,0 @@
-import{u as s}from"./main.f2fa2716.js";import{_ as t,o,c as r,a as e,t as a}from"../js/index.js";const n={data(){return{main:s()}}},i={class:"greetings"},c={class:"text"},l=e("h1",null,"Profil, only logged users!",-1);function _(p,d,u,f,m,h){return o(),r("div",i,[e("p",c,[l,e("pre",null,a(this.main.user),1)])])}var $=t(n,[["render",_]]);export{$ as default};

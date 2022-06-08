@@ -1,1 +1,0 @@
-import{_ as t,u as e,o as a,c}from"../js/index.js";const n={name:"account-page",data(){return{auth:e()}}};function o(r,s,u,p,_,f){return a(),c("h1",null,"Account Settings")}var d=t(n,[["render",o]]);export{d as default};

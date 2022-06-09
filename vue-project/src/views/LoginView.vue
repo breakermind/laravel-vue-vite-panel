@@ -18,8 +18,7 @@ export default {
     }
   },
   mounted() {
-    this.auth.message = ''
-    this.auth.error = false
+    this.auth.clearError()
   },
   methods: {
     onSubmit(e) {

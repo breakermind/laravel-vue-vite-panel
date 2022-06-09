@@ -112,6 +112,10 @@ export const useAuthStore = defineStore('auth', {
         this.error = true
       }
     },
+    clearError() {
+      this.message = ''
+      this.error = false
+    },
     scrollTop() {
       window.scrollTo({
         top: 0,

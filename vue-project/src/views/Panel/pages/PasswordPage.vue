@@ -12,7 +12,7 @@ export default {
     }
   },
   mounted() {
-    this.clearError()
+    this.auth.clearError()
   },
   methods: {
     onSubmit(e) {
@@ -24,10 +24,6 @@ export default {
     },
     scrollTop() {
       window.scrollTo({top: 0, behavior: 'smooth'})
-    },
-    clearError() {
-      this.auth.message = ''
-      this.auth.error = false
     }
   },
   directives: {

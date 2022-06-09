@@ -61,7 +61,7 @@ const router = createRouter({
     {
       path: '/panel/password',
       name: 'panel.password',
-      component: () => import('../views/Panel/PasswordView.vue'),
+      component: () => import('../views/Panel/ChangePasswordView.vue'),
       meta: { requiresAuth: true },
     },
     {

@@ -17,9 +17,11 @@ export default {
   mounted() {
     this.auth.message = ''
     this.auth.error = false
+
+    activate()
   },
   methods: {
-    async onSubmit(e) {
+    async activate() {
       if(this.$route.query.locale) {
         this.$i18n.locale = this.$route.query.locale
         await this.auth.changeLocale(this.$route.query.locale)
@@ -27,23 +29,6 @@ export default {
 
       this.auth.activateUser(this.$route.params.id, this.$route.params.code)
     },
-    validatePass(e) {
-      // console.log("Key", e.target.value)
-    },
-    scrollTop() {
-      window.scrollTo({
-        top: 0,
-        behavior: 'smooth'
-      })
-    },
-  },
-  directives: {
-    focus: {
-      // Use with <input v-focus>
-      mounted(el) {
-        el.focus()
-      }
-    }
   },
 }
 </script>
@@ -56,7 +41,7 @@ export default {
       <ChangeLocale />
     </div>
 
-    <form @submit.prevent="onSubmit">
+    <form>
       <h1 class="w-full">
         {{ $t("activate.Activation") }}
         <router-link to="/"><img class="float-right" src="@/assets/logo.svg" width="50" height="50"></router-link>

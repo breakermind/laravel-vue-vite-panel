@@ -1,15 +1,12 @@
 <script>
-import { useAuthStore } from '@/stores/auth.js'
-import TopMenu from "./TopMenu.vue";
+import TopMenu from '@/views/TopMenu.vue'
 
 export default {
   components: {
-    TopMenu,
+    TopMenu
   },
   data() {
-    return {
-      auth: useAuthStore()
-    }
+    return {}
   }
 }
 </script>
@@ -17,9 +14,8 @@ export default {
 <template>
   <main>
     <TopMenu />
-
-    <div class="content">
-      <h1> About page content </h1>
+    <div cass="content">
+      <h1> {{ $t('page.About') }} </h1>
     </div>
   </main>
 </template>

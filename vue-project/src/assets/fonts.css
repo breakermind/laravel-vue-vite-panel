@@ -3,9 +3,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Pangolin&display=swap');
 
 :root {
-	--font-exo2: font-family: 'Exo 2', sans-serif;
-	--font-mail: ffont-family: 'Pangolin', cursive;
-	--font-pangolin: font-family: 'Mali', cursive;
+	--font-exo2: 'Exo 2', sans-serif;
+	--font-mail: 'Pangolin', cursive;
+	--font-pangolin: 'Mali', cursive;
 }
 
 /*

@@ -4,7 +4,7 @@ import { RouterLink } from "vue-router";
 
 <template>
   <div class="content">
-      <h1>404 Error Page!</h1>
+      <h1>{{ $t('page.Error404') }}</h1>
       <p> <RouterLink to="/"> <i class="fas fa-chevron-left"></i> {{ $t('message.back') ?? 'Homepage' }} </RouterLink> </p>
   </div>
 </template>

@@ -22,7 +22,7 @@ export default {
     <TopMenu />
 
     <div class="content">
-      <h1> This is params page </h1>
+      <h1> {{ $t('page.Params') }} </h1>
       <span> {{ id }} {{ code }} </span>
     </div>
   </main>

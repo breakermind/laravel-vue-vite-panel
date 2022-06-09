@@ -1,7 +1,7 @@
 <script>
 import { useAuthStore } from '@/stores/auth.js'
-import ChangeLocale from "@/components/ChangeLocale.vue";
 import TopMenu from "./TopMenu.vue";
+import ChangeLocale from "@/components/ChangeLocale.vue";
 
 export default {
   name: "lang-view",
@@ -21,7 +21,8 @@ export default {
 
     <div class="content">
       <h1>
-        {{ $t('message.helloBig') }}
+        {{ $t('page.Lang') }}
+
         <ChangeLocale />
       </h1>
     </div>

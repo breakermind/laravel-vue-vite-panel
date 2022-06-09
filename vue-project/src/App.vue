@@ -1,29 +1,43 @@
 <script>
 import { RouterLink, RouterView } from "vue-router";
 import { inject } from 'vue'
-import HelloWorld from "@/components/HelloWorld.vue";
-import { useAuthStore } from '@/stores/auth.js'
+import axios from 'axios'
 
 export default {
   inject: ['globalStore'],
-  setup() {
-    const auth = useAuthStore()
-    const store = inject('globalStore')
-    return { auth, store }
+  data() {
+    return {}
   },
   mounted() {
-    console.log('Lang', this.auth.locale, 'Global Store', this.globalStore, this.store)
+    this.loadLang()
+    console.log(this.globalStore)
     this.globalStore.id = 'Store 123456'
+  },
+  methods: {
+    async loadLang() {
+      try {
+        let res = await axios.get('/web/api/csrf')
+        console.log("Loaded locale from server", res.data.locale)
+        this.$i18n.locale = res.data.locale
+        console.log("Current locale ", this.$i18n.locale)
+      }catch(error) {
+        console.log("loadLang", error)
+      }
+    }
   }
 }
 </script>
 
 <template>
+  <!-- <nav>
+    <RouterLink to="/">Home</RouterLink>
+    <RouterLink to="/about">About</RouterLink>
+  </nav> -->
+
   <RouterView />
 </template>
 
 <style>
-@import "@/assets/tailwind.css";
-@import "@/assets/fonts.css";
-@import "@/assets/base.css";
+@import '@/assets/fonts.css';
+@import '@/assets/base.css';
 </style>

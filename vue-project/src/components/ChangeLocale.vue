@@ -11,6 +11,7 @@ import { mapActions } from 'pinia'
 import { useAuthStore } from '@/stores/auth.js'
 
 export default {
+  name: 'ChangeLocale',
   data() {
     return {}
   },
@@ -30,4 +31,5 @@ export default {
 <style scoped>
   .locale-changer {float: right; width: auto; height: auto; padding: 15px;}
   .locale-changer-select {float: right; width: 50px; padding: 10px; text-align: center; border: 0px; background: transparent;}
+  .locale-changer-select:focus {border: none; box-shadow: none;}
 </style>

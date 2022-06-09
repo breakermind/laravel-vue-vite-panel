@@ -1,21 +1,27 @@
 import { defineStore } from 'pinia'
-import axios from 'axios'
 import router from '../router'
 import lang from '../lang'
+import axios from 'axios'
 
-export const useAuthStore = defineStore({
-  id: 'auth',
+export const useAuthStore = defineStore('auth', {
   state: () => ({
     user: {id: 0, name: 'Unknown', image: 'https://www.w3schools.com/howto/img_avatar.png'},
     loggedIn: false,
     error: false,
     message: '',
-    locale: lang.locale ?? 'en',
   }),
   getters: {
     isLoggedIn: (state) => state.loggedIn
   },
   actions: {
+    async changeLocale(locale) {
+      try {
+        let res = await axios.get('/web/api/locale/' + locale)
+        console.log("Change locale", res.data);
+      } catch (error) {
+        console.log("Error locale", error.toJSON());
+      }
+    },
     setAuth(res) {
       this.loggedIn = true
       this.user = res.data.user
@@ -32,13 +38,12 @@ export const useAuthStore = defineStore({
       try {
         let res = await axios.get('/web/api/logged')
         console.log("isAuthenticated OK")
-        this.setAuth(res)
+        this.loggedIn = true
+        this.user = res.data.user
       } catch (error) {
         console.log("isAuthenticated ERROR")
         this.loggedIn = false
         this.user = null
-        this.message = ''
-        this.error = false
       }
     },
     async loginUser(data) {
@@ -53,23 +58,22 @@ export const useAuthStore = defineStore({
       }
     },
     async logoutUser() {
-      try {
-        let res = await axios.get('/web/api/logout')
-        console.log("Logout OK")
-        this.auth.message = ''
-        this.auth.loggedIn = false
-        this.auth.user = null
-      } catch (error) {
-        console.log("Logout ERROR")
-      }
+      let res = await axios.get('/web/api/logout')
+      console.log("Logout OK")
+      this.auth.message = ''
+      this.auth.loggedIn = false
+      this.auth.user = null
     },
-    async changeLocale(locale) {
+    async changeUserPassword(data) {
       try {
-        let res = await axios.get('/web/api/locale/' + locale)
-        this.locale = locale
-        console.log("Change locale", res.data);
+        let res = await axios.post('/web/api/change-password', data)
+        console.log("Password OK")
+        this.message = res.data.message
+        this.error = false
       } catch (error) {
-        console.log("Error locale", error.toJSON());
+        console.log("Password ERROR")
+        this.message = error.response.data.message
+        this.error = true
       }
     },
     scrollTop() {

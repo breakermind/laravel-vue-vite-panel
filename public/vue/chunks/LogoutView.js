@@ -1,1 +1,1 @@
-import{u as t,B as u}from"../js/index.js";const o={data(){return{auth:t()}},mounted(){this.auth.logoutUser(),u.push("/")}};export{o as default};
+import{u as t}from"../js/index.js";const s={data(){return{auth:t()}},mounted(){this.auth.loggedIn==!0&&(this.auth.logoutUser(),this.auth.message="",this.$i18n.locale=this.$i18n.fallbackLocale,this.$router.push("/login"))}};export{s as default};

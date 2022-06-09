@@ -1,8 +1,6 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\Facades\Session;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,9 +17,6 @@ use Illuminate\Support\Facades\Session;
 Route::get('/error', function () {
     return view('error');
 });
-
-// Web api dev routes
-// require('web-api.php');
 
 // Vue login
 Route::get('/login', function () {

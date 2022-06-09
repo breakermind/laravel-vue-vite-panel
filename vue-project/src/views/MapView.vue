@@ -1,7 +1,7 @@
 <script>
+import { Loader } from "@googlemaps/js-api-loader"
 import { useAuthStore } from '@/stores/auth.js'
 import TopMenu from "./TopMenu.vue";
-import { Loader } from "@googlemaps/js-api-loader"
 
 export default {
   name: "map-view",
@@ -91,11 +91,11 @@ export default {
 </script>
 
 <template>
-    <main>
+  <main>
     <TopMenu />
 
     <div class="content">
-      <h1> Google map </h1>
+      <h1> {{ $t('page.Map') }} </h1>
       <div id="map"></div>
     </div>
   </main>

@@ -38,6 +38,21 @@ const router = createRouter({
       component: () => import('../views/LoginView.vue')
     },
     {
+      path: '/register',
+      name: 'register',
+      component: () => import('../views/RegisterView.vue')
+    },
+    {
+      path: '/password',
+      name: 'password',
+      component: () => import('../views/PasswordView.vue')
+    },
+    {
+      path: '/activate/:id/:code',
+      name: 'activate',
+      component: () => import('../views/ActivateView.vue')
+    },
+    {
       path: '/panel',
       name: 'panel',
       component: () => import('../views/Panel/ProfilView.vue'),

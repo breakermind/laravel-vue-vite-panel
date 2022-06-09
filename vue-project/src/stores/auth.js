@@ -46,6 +46,30 @@ export const useAuthStore = defineStore('auth', {
         this.user = null
       }
     },
+    async registerUser(data) {
+      try {
+        let res = await axios.post('/web/api/register', data)
+        console.log("Register OK")
+        this.message = res.data.message
+        this.error = false
+      } catch (error) {
+        console.log("Register ERROR")
+        this.message = error.response.data.message
+        this.error = true
+      }
+    },
+    async activateUser(id, code) {
+      try {
+        let res = await axios.get('/web/api/activate/' + id + '/' + code)
+        console.log("Activate OK")
+        this.message = res.data.message
+        this.error = false
+      } catch (error) {
+        console.log("Activate ERROR")
+        this.message = error.response.data.message
+        this.error = true
+      }
+    },
     async loginUser(data) {
       try {
         let res = await axios.post('/web/api/login', data)
@@ -67,6 +91,18 @@ export const useAuthStore = defineStore('auth', {
     async changeUserPassword(data) {
       try {
         let res = await axios.post('/web/api/change-password', data)
+        console.log("Password OK")
+        this.message = res.data.message
+        this.error = false
+      } catch (error) {
+        console.log("Password ERROR")
+        this.message = error.response.data.message
+        this.error = true
+      }
+    },
+    async resetUserPassword(data) {
+      try {
+        let res = await axios.post('/web/api/reset', data)
         console.log("Password OK")
         this.message = res.data.message
         this.error = false

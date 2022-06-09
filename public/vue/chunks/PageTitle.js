@@ -1,0 +1,1 @@
+import{_ as t}from"../js/index.js";const e={name:"PageTitle",props:{title:{type:String,default:"Panel"}},mounted(){document.title=this.title}};function n(r,a,o,i,s,p){return null}var l=t(e,[["render",n]]);export{l as P};

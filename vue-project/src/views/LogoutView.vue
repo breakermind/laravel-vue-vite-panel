@@ -10,7 +10,7 @@ export default {
   },
   mounted() {
     this.auth.logoutUser()
-    router.push('/panel')
+    router.push('/')
   }
 }
 </script>

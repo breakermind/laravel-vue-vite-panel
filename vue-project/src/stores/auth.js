@@ -67,6 +67,7 @@ export const useAuthStore = defineStore({
       try {
         let res = await axios.get('/web/api/locale/' + locale)
         this.locale = locale
+        console.log("Change locale", res.data);
       } catch (error) {
         console.log("Error locale", error.toJSON());
       }

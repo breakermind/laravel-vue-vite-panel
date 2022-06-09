@@ -25,7 +25,7 @@ export default {
 
     <div class="user-icon">
       <img :src="this.auth.user.image">
-      <div class="text"> {{ this.auth.user.name }} </div>
+      <div class="text"> {{ this.auth.user.name.split(' ')[0] ?? 'Unknown' }} </div>
     </div>
 
     <div class="menu-icon notify menu-icon-active"> <i class="fas fa-bell"></i> <div class="dot"></div> </div>

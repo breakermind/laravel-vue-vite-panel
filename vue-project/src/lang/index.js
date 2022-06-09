@@ -1,9 +1,9 @@
 import messages from './messages.js'
 
 const lang = {
-  locale: 'pl', // set locale
+  locale: 'en', // set locale
   fallbackLocale: 'en', // set fallback locale
-  availableLocales: ['pl','en'], // available locales
+  availableLocales: ['en','pl'], // available locales
   messages: messages,
 }
 

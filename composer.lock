@@ -4,21 +4,15 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "42cb36bec46d19e0a29c688572a29340",
+    "content-hash": "abc1bf4354de89324d4a73360bd2fca1",
     "packages": [
         {
             "name": "breakermind/webi",
-            "version": "v3.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/breakermind/webi.git",
-                "reference": "f717ce8510b06420d5639299272d791f948a1d7a"
-            },
+            "version": "dev-main",
             "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/breakermind/webi/zipball/f717ce8510b06420d5639299272d791f948a1d7a",
-                "reference": "f717ce8510b06420d5639299272d791f948a1d7a",
-                "shasum": ""
+                "type": "path",
+                "url": "packages/breakermind/webi",
+                "reference": "94b72d8eba807994feb9754124b8fe8fe74ecef6"
             },
             "type": "library",
             "extra": {
@@ -32,17 +26,16 @@
                 }
             },
             "autoload": {
-                "psr-4": {
-                    "Webi\\": "src/",
-                    "Database\\Seeders\\": "database/seeders/",
-                    "Database\\Factories\\": "database/factories/",
-                    "Database\\Migrations\\": "database/migrations/"
-                },
                 "classmap": [
                     "src/"
-                ]
+                ],
+                "psr-4": {
+                    "Webi\\": "src/",
+                    "Database\\Factories\\": "database/factories/",
+                    "Database\\Migrations\\": "database/migrations/",
+                    "Database\\Seeders\\": "database/seeders/"
+                }
             },
-            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -52,11 +45,9 @@
                     "email": "m.luk.box@gmail.com"
                 }
             ],
-            "support": {
-                "issues": "https://github.com/breakermind/webi/issues",
-                "source": "https://github.com/breakermind/webi/tree/v3.0"
-            },
-            "time": "2022-06-08T18:06:42+00:00"
+            "transport-options": {
+                "relative": true
+            }
         },
         {
             "name": "brick/math",
@@ -832,16 +823,16 @@
         },
         {
             "name": "guzzlehttp/psr7",
-            "version": "2.2.1",
+            "version": "2.2.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/guzzle/psr7.git",
-                "reference": "c94a94f120803a18554c1805ef2e539f8285f9a2"
+                "reference": "a119247127ff95789a2d95c347cd74721fbedaa4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/guzzle/psr7/zipball/c94a94f120803a18554c1805ef2e539f8285f9a2",
-                "reference": "c94a94f120803a18554c1805ef2e539f8285f9a2",
+                "url": "https://api.github.com/repos/guzzle/psr7/zipball/a119247127ff95789a2d95c347cd74721fbedaa4",
+                "reference": "a119247127ff95789a2d95c347cd74721fbedaa4",
                 "shasum": ""
             },
             "require": {
@@ -927,7 +918,7 @@
             ],
             "support": {
                 "issues": "https://github.com/guzzle/psr7/issues",
-                "source": "https://github.com/guzzle/psr7/tree/2.2.1"
+                "source": "https://github.com/guzzle/psr7/tree/2.2.2"
             },
             "funding": [
                 {
@@ -943,7 +934,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2022-03-20T21:55:58+00:00"
+            "time": "2022-06-08T19:55:23+00:00"
         },
         {
             "name": "laravel/framework",
@@ -5464,16 +5455,16 @@
         },
         {
             "name": "laravel/sail",
-            "version": "v1.14.9",
+            "version": "v1.14.10",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/sail.git",
-                "reference": "8435763e7735f6eff15b03df014cea1217fc826e"
+                "reference": "0ea5d683af4d189071efcdb9e83946c10dab82c3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/sail/zipball/8435763e7735f6eff15b03df014cea1217fc826e",
-                "reference": "8435763e7735f6eff15b03df014cea1217fc826e",
+                "url": "https://api.github.com/repos/laravel/sail/zipball/0ea5d683af4d189071efcdb9e83946c10dab82c3",
+                "reference": "0ea5d683af4d189071efcdb9e83946c10dab82c3",
                 "shasum": ""
             },
             "require": {
@@ -5520,7 +5511,7 @@
                 "issues": "https://github.com/laravel/sail/issues",
                 "source": "https://github.com/laravel/sail"
             },
-            "time": "2022-06-06T14:28:04+00:00"
+            "time": "2022-06-09T07:10:28+00:00"
         },
         {
             "name": "mockery/mockery",
@@ -7812,7 +7803,9 @@
     ],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": [],
+    "stability-flags": {
+        "breakermind/webi": 20
+    },
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {

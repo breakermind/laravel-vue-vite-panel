@@ -21,13 +21,14 @@ app.use(router)
 // Get with this.app_locale in component
 // app.config.globalProperties.app_locale = i18n.locale
 
-// Global variable
+// Global variable. Use with inject['globalStore'] in component
 app.provide('globalStore', {
 	id: 'globalStore',
 	async getUsers() {
 		let res = await axios.get('https://jsonplaceholder.typicode.com/users')
 		console.log("Async, await", res.data)
 	}
+
 })
 
 app.mount('#app')

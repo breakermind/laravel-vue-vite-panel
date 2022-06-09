@@ -20,7 +20,7 @@ export default {
   watch: {
     // Change server locale
     '$i18n.locale': function(newVal, oldVal) {
-      console.log('New locale', oldVal, newVal, this.$i18n.locale)
+      console.log('From ', oldVal, 'to', newVal, 'curr', this.$i18n.locale)
       this.changeLocale(newVal)
     }
   }

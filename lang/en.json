@@ -5,6 +5,7 @@
     "Changed.": "Changed.",
     "The email address field is required.": "The email address field is required.",
     "Email has been confirmed.": "Email has been confirmed.",
+    "The email address has already been confirmed.": "The email address has already been confirmed.",
     "Invalid credentials.": "Invalid credentials.",
     "Can not create user.": "Can not create user.",
     "Unable to send e-mail, please try again later.": "Unable to send e-mail, please try again later.",

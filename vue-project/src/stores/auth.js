@@ -82,11 +82,15 @@ export const useAuthStore = defineStore('auth', {
       }
     },
     async logoutUser() {
-      let res = await axios.get('/web/api/logout')
-      console.log("Logout OK")
-      this.auth.message = ''
-      this.auth.loggedIn = false
-      this.auth.user = null
+      try {
+        let res = await axios.get('/web/api/logout')
+        console.log("Logout OK")
+        this.auth.message = ''
+        this.auth.loggedIn = false
+        this.auth.user = null
+      } catch (error) {
+        console.log("Logout ERROR")
+      }
     },
     async changeUserPassword(data) {
       try {

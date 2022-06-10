@@ -2,6 +2,7 @@
 import { RouterLink } from "vue-router";
 import { useAuthStore } from '@/stores/auth.js'
 import { useNavbarStore } from '@/stores/navbar.js'
+import image from "@/assets/user.png"
 
 export default {
   name: "top-menu",
@@ -13,6 +14,11 @@ export default {
       // image: auth.user.image ?? 'https://www.w3schools.com/howto/img_avatar.png',
     }
   },
+  methods: {
+    replaceImage(e) {
+      e.target.src = image
+    }
+  }
 }
 </script>
 
@@ -24,7 +30,7 @@ export default {
     <RouterLink to="/logout" v-if="this.auth.loggedIn" class="menu-icon exit"> <i class="fas fa-sign-out-alt"></i> </RouterLink>
 
     <div class="user-icon">
-      <img :src="this.auth.user.image">
+      <img :src="this.auth.user.image" @error="replaceImage">
       <div class="text"> {{ this.auth.user.name.split(' ')[0] ?? 'Unknown' }} </div>
     </div>
 

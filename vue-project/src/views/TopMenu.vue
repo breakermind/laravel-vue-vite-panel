@@ -22,6 +22,7 @@ export default {
     <RouterLink to="/about">{{ $t('page.About') }}</RouterLink>
     <RouterLink to="/params/123/HELLO">{{ $t('page.Params') }}</RouterLink>
     <RouterLink to="/map">{{ $t('page.Map') }}</RouterLink>
+    <RouterLink to="/map/draw">{{ $t('page.MapDraw') }}</RouterLink>
     <RouterLink to="/lang">{{ $t('page.Lang') }}</RouterLink>
     <RouterLink to="/login" v-if="!this.auth.loggedIn">{{ $t('page.Login') }}</RouterLink>
     <RouterLink to="/panel" v-if="this.auth.loggedIn">{{ $t('page.Panel') }}</RouterLink>

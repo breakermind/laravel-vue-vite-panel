@@ -17,6 +17,7 @@ const en = {
     Settings: 'Settings',
     Params: 'Params',
     Map: 'Map',
+    MapDraw: 'Polygon',
     Lang: 'Language',
     Login: 'Login',
     Panel: 'Panel',

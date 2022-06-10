@@ -10,10 +10,10 @@ export default {
   },
   data() {
     return {
+      api_key: '',
       map: null,
       poly: null,
       polygon: null,
-      api_key: '',
       lat: 24.886,
       lng: -70.268,
       scrollwheel: true,
@@ -29,6 +29,10 @@ export default {
       const loader = new Loader({
         apiKey: this.api_key,
         version: "weekly",
+        libraries: [
+          'drawing',
+          'geometry'
+        ],
       })
 
       loader.load().then(() => {

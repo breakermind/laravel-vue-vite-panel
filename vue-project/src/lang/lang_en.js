@@ -21,7 +21,6 @@ const en = {
     Login: 'Login',
     Panel: 'Panel',
     Logout: 'Logout',
-    Error404: '404 Error Page!',
     // Panel
     panel: {
       Profil: 'Profil',
@@ -85,7 +84,7 @@ const en = {
   },
   activate: {
     Activation: 'Activation',
-    Description: 'Inser valid activation code. If something went wrong try to reset password.',
+    Description: 'Insert valid activation code. If something went wrong try to reset password.',
     Forgot_password: 'Forgot password?',
     Have_an_account: "Have an account?"
   },

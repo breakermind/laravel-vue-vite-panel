@@ -16,7 +16,7 @@ export default {
   },
   mounted() {
     this.auth.clearError()
-    activate()
+    this.activate()
   },
   methods: {
     async activate() {

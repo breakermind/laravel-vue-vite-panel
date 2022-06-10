@@ -22,17 +22,12 @@ export default {
   },
   methods: {
     onSubmit(e) {
+      this.auth.scrollTop()
       this.auth.resetUserPassword(new FormData(e.target))
     },
     validatePass(e) {
       // console.log("Key", e.target.value)
     },
-    scrollTop() {
-      window.scrollTo({
-        top: 0,
-        behavior: 'smooth'
-      })
-    }
   },
   directives: {
     focus: {

@@ -21,7 +21,6 @@ const pl = {
     Login: 'Zaloguj się',
     Panel: 'Panel clienta',
     Logout: 'Wyloguj',
-    Error404: '404 Strona Nie Istnieje!',
     // Panel
     panel: {
       Profil: 'Profil użytkownika',

@@ -95,7 +95,7 @@ router.beforeEach(async (to, from, next) => {
     next({
       name: 'panel'
     })
-  } else if (to.meta.requiresAuth && !auth.isLoggedIn){
+  } else if (to.meta.requiresAuth && !auth.isLoggedIn) {
     // ✅ Redirect to login if not logged
     next({
       name: 'login',

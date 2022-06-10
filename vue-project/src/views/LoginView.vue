@@ -22,6 +22,7 @@ export default {
   },
   methods: {
     onSubmit(e) {
+      this.auth.scrollTop()
       this.auth.loginUser(new FormData(e.target))
     },
     validatePass(e) {

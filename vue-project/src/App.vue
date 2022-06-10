@@ -10,14 +10,14 @@ export default {
   },
   mounted() {
     this.loadLang()
-    console.log(this.globalStore)
+    console.log("Provided", this.globalStore)
     this.globalStore.id = 'Store 123456'
   },
   methods: {
     async loadLang() {
       try {
         let res = await axios.get('/web/api/csrf')
-        console.log("Loaded locale from server", res.data.locale)
+        console.log("Server locale", res.data.locale)
         this.$i18n.locale = res.data.locale
         console.log("Current locale ", this.$i18n.locale)
       }catch(error) {

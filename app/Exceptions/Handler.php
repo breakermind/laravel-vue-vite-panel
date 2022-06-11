@@ -4,8 +4,6 @@ namespace App\Exceptions;
 
 use Illuminate\Foundation\Exceptions\Handler as ExceptionHandler;
 use Throwable;
-use Illuminate\Auth\AuthenticationException;
-use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 
 class Handler extends ExceptionHandler
 {
@@ -48,44 +46,5 @@ class Handler extends ExceptionHandler
         $this->reportable(function (Throwable $e) {
             //
         });
-
-        $this->renderable(function (Throwable $e, $request) {
-            // Json response
-            if (
-                $request->is('web/*') ||
-                $request->is('api/*') ||
-                $request->wantsJson()
-            ) {
-                $msg = empty($e->getMessage()) ? 'Not Found' : $e->getMessage();
-                $code = empty($e->getCode()) ? 404 : $e->getCode();
-
-                if($e instanceof AuthenticationException) {
-                    $code = 401;
-                }
-
-                if($e instanceof NotFoundHttpException) {
-                    $msg = 'Not Found';
-                }
-
-                return response()->json([
-                    'message' => $msg,
-                    'code' => $code,
-                    'ex' => [
-                        'name' => $this->getClassName(get_class($e)),
-                        'namespace' => get_class($e),
-                    ]
-                ], $code);
-            }
-        });
-    }
-
-    /**
-     * Get exception class name without namespace.
-     *
-     * @return string
-     */
-    static function getClassName($e) {
-        $path = explode('\\', $e);
-        return array_pop($path);
     }
 }

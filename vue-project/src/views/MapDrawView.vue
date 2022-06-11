@@ -110,6 +110,7 @@ export default {
         // Create
         draw.addListener('addfeature', function(e) {
           updatePolygon(e)
+          updatePoly(e)
           draw.forEach((p) => {
             if(p != e.feature) {
               draw.remove(p);
@@ -137,14 +138,11 @@ export default {
           let GeoJSON = {"type": "Polygon", "coordinates": []}
           let obj = e.feature.getGeometry()
           let arr = []
-
           obj.forEachLatLng((p) => {
             arr.push([p.lng(), p.lat()])
-            console.log("Point" , p)
           })
           arr.push(arr[0])
           GeoJSON.coordinates.push(arr);
-
           let el = document.getElementById("poly")
           if(el) {
             el.value = JSON.stringify(GeoJSON)
@@ -235,4 +233,5 @@ export default {
 
 <style scoped>
 #map {width: 100%; height: 400px;}
+#poly {margin-top: 30px;}
 </style>

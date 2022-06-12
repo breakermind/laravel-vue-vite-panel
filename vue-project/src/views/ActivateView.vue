@@ -39,7 +39,7 @@ export default {
       <ChangeLocale />
     </div>
 
-    <form>
+    <form class="form">
       <h1 class="w-full">
         {{ $t("activate.Activation") }}
         <router-link to="/"><img class="float-right" src="@/assets/logo.svg" width="50" height="50"></router-link>

@@ -49,7 +49,7 @@ export default {
       <ChangeLocale />
     </div>
 
-    <form @submit.prevent="onSubmit">
+    <form @submit.prevent="onSubmit" class="form">
       <h1 class="w-full">
         {{ $t("register.Sign_Up") }}
         <router-link to="/"><img class="float-right" src="@/assets/logo.svg" width="50" height="50"></router-link>
@@ -69,7 +69,7 @@ export default {
       <label>{{ $t('register.Confirm_password') }} <i class="far fa-key"></i></label>
       <input v-model="password_confirmation"  type="password" name="password_confirmation" class="input" :placeholder="$t('register.Confirm_password_eg')">
 
-      <div class="full">
+      <div class="full full-margin">
         <button class="button" :title="$t('register.Register')">{{ $t('register.Register') }}</button>
       </div>
 

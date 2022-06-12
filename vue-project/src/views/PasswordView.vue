@@ -48,7 +48,7 @@ export default {
       <ChangeLocale />
     </div>
 
-    <form @submit.prevent="onSubmit">
+    <form @submit.prevent="onSubmit" class="form">
       <h1 class="w-full">
         {{ $t("password.Reset_password") }}
         <router-link to="/"><img class="float-right" src="@/assets/logo.svg" width="50" height="50"></router-link>
@@ -59,7 +59,7 @@ export default {
       <label>{{ $t('password.Email_address') }} <i class="far fa-envelope"></i></label>
       <input v-focus v-model="email" type="text" name="email" class="input" :placeholder="$t('password.Email_address_eg')">
 
-      <div class="full">
+      <div class="full full-margin">
         <button class="button" :title="$t('password.Send_password')">{{ $t('password.Send_password') }}</button>
       </div>
 

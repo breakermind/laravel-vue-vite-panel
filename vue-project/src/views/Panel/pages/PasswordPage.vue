@@ -55,14 +55,10 @@ export default {
       <label>{{ $t('change_password.Confirm_password') }} <i class="far fa-key"></i></label>
       <input v-model="password_confirmation"  type="password" name="password_confirmation" class="input" :placeholder="$t('change_password.Confirm_password')">
 
-      <div class="full">
+      <div class="full full-margin">
         <button class="button" :title="$t('change_password.Change')">{{ $t('change_password.Change') }}</button>
       </div>
 
-      <!-- <div class="full">
-        <router-link to="/login" class="left">{{ $t('change_password.Have_an_account') }}</router-link>
-        <router-link to="/password" class="right">{{ $t('change_password.Forgot_password') }}</router-link>
-      </div> -->
     </form>
 
   </div>

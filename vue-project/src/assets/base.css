@@ -17,8 +17,11 @@
   --color: #204090;
   --color-hover: #204090aa;
   --color-placeholder: #20409044;
+  --color-shadow: #20409011;
   --color-alert: #f23;
   --color-info: #5c5;
+  --color-vue: #42b883;
+  --color-vue-dark: #35495e;
 
   --section-gap: 160px;
   --radius: 10px;
@@ -38,8 +41,11 @@
     --color: #55cc55;
     --color-hover: #55cc55aa;
     --color-placeholder: #55cc5544;
+    --color-shadow: #20409011;
     --color-alert: #f23;
     --color-info: #5c5;
+    --color-vue: #42b883;
+    --color-vue-dark: #35495e;
 
     --section-gap: 160px;
     --radius: 10px;
@@ -85,7 +91,7 @@ h2 {
   text-align: left;
 }
 
-form {
+.form {
   margin: 90px auto;
   width: 90%;
   max-width: 500px;
@@ -194,7 +200,6 @@ nav a.router-link-exact-active {
   float: left;
   width: 100%;
   overflow: hidden;
-  margin: 20px 0px;
 }
 
 .full .left {
@@ -205,6 +210,10 @@ nav a.router-link-exact-active {
 .full .right {
   float: right;
   padding: 20px 0px;
+}
+
+.full-margin {
+  margin: 20px 0px 10px 0px;
 }
 
 .alert-error {color: #f23; background: #ff223307; padding: 13px 25px; margin: 5px 0px; border-left: 2px solid #f23;}

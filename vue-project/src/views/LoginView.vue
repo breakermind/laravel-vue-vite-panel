@@ -2,16 +2,18 @@
 import { useAuthStore } from '@/stores/auth.js'
 import ChangeLocale from "@/components/ChangeLocale.vue";
 import PageTitle from '@/components/PageTitle.vue'
+import Checkbox from "./Form/Checkbox.vue"
+import Input from "./Form/Input.vue"
 
 export default {
   components: {
-    ChangeLocale, PageTitle
+    ChangeLocale, PageTitle, Checkbox, Input
   },
   data() {
     return {
       email: '',
       password: '',
-      remember_me: 0,
+      remember_me: false,
       message: null,
       error: false,
       auth: useAuthStore()
@@ -26,7 +28,7 @@ export default {
       this.auth.loginUser(new FormData(e.target))
     },
     validatePass(e) {
-      // console.log("Key", e.target.value)
+      console.log("Key", e.target.value)
     },
     scrollTop() {
       window.scrollTo({
@@ -54,7 +56,7 @@ export default {
       <ChangeLocale />
     </div>
 
-    <form @submit.prevent="onSubmit">
+    <form @submit.prevent="onSubmit" class="form">
       <h1 class="w-full">
         {{ $t("login.Sign_In") }}
         <router-link to="/"><img class="float-right" src="@/assets/logo.svg" width="50" height="50"></router-link>
@@ -68,10 +70,10 @@ export default {
       <label>{{ $t('login.Password') }} <i class="fas fa-key"></i></label>
       <input v-model="password"  @keyup="validatePass" type="password" name="password" class="input" :placeholder="$t('login.Password_eg')">
 
-      <label>{{ $t('login.Remember_me') }}</label>
+      <Checkbox :label="$t('login.Remember_me')" value="1" v-model="remember_me" name="remember_me" />
+
       <div class="full">
-        <input v-model="remember" type="checkbox" name="remember_me" value="1">
-        <button class="button" :title="$t('login.Login')">{{ $t('login.Login') }}</button>
+        <button class="button" :title="$t('login.Login')" ref="button">{{ $t('login.Login') }}</button>
       </div>
 
       <div class="full">

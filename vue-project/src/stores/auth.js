@@ -32,7 +32,7 @@ export const useAuthStore = defineStore('auth', {
     delAuth(error) {
       this.loggedIn = false
       this.user = null
-      this.message = error.response.data.message ?? 'Only authenticated users'
+      this.message = error.response.data.message ?? error.message
       this.error = true
     },
     async isAuthenticated() {
@@ -55,7 +55,7 @@ export const useAuthStore = defineStore('auth', {
         this.error = false
       } catch (error) {
         console.log("Register ERROR")
-        this.message = error.response.data.message
+        this.message = error.response.data.message ?? error.message
         this.error = true
       }
     },
@@ -67,7 +67,7 @@ export const useAuthStore = defineStore('auth', {
         this.error = false
       } catch (error) {
         console.log("Activate ERROR")
-        this.message = error.response.data.message
+        this.message = error.response.data.message ?? error.message
         this.error = true
       }
     },
@@ -101,7 +101,7 @@ export const useAuthStore = defineStore('auth', {
         this.error = false
       } catch (error) {
         console.log("Password ERROR")
-        this.message = error.response.data.message
+        this.message = error.response.data.message ?? error.message
         this.error = true
       }
     },
@@ -113,7 +113,7 @@ export const useAuthStore = defineStore('auth', {
         this.error = false
       } catch (error) {
         console.log("Password ERROR")
-        this.message = error.response.data.message
+        this.message = error.response.data.message ?? error.message
         this.error = true
       }
     },

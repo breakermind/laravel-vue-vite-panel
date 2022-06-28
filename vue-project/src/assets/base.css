@@ -91,6 +91,10 @@ h2 {
   text-align: left;
 }
 
+form {
+  overflow: hidden;
+}
+
 .form {
   margin: 90px auto;
   width: 90%;
